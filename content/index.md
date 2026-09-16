@@ -17,10 +17,11 @@ no-update-date: true
 
 ## Intro to git for Physicists
 
-Notebooks on Python for TU Delfts' First Year Physics Lab Course.
+Note(book)s on the use of Git for the  
+TU Delfts' First Year Physics Lab Courses.
 
-_Freek Pols & Rolf Hut_ 
+_Freek Pols, Mark Meletto & Rolf Hut_ 
 
-![](figures/gittree.png)
+![](figures/cover.png)
 
 +++

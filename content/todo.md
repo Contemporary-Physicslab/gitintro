@@ -3,13 +3,17 @@
 - [ ] gebruiken bestanden van Rolf
 - [ ] attribution
 - [ ] merge conflict in poem
-- [ ] vsc vs cml
+- [ ] vsc vs cml, in tabs
+- [ ] workflow
+- [ ] PR, review, protected branch etc
+
 
 ````{admonition} Source: The Turing Way [^TTW]
 :class: note
 ```{figure} figures/TTW-github-basic-diagram.jpg
+:label: fig_GH_printscreen
 
-https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/
+A printscreen of the GitHub webpage, taken from [The Turing Way](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/)
 ```
 
 
@@ -20,7 +24,7 @@ Annotated diagram of repository after its basic creation, explaining the main fe
 - **3. Code:** this tab brings you back to your landing page. It shows you the folders that you have made in the repo.
 - **4. Main:** this is your default development branch or active branch of your repository.
 - **5. Branch:** parallel version(s) of your repository.
-- **6. `README.md` file:** this file contains basic information about your project (in this case it only has the project name: “trial-repo”. When we plan to make a website, this will be rendered as a landing (front) page for your site.
+- **6. `README.md` file:** this file contains basic information about your project (in this case it only has the project name: “trial-repo”). When we plan to make a website, this will be rendered as a landing (front) page for your site.
 
 On the right side of the webpage we have the following features:
 - **7. Green Code button:** click it to download your repository locally.
