@@ -17,8 +17,5 @@ project:
     - file: content/poem.md
     - file: content/todo.md
 
-site:
-  template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+extends:
+  - https://gitlab.tudelft.nl/oicm/assets/-/raw/main/style.yml?ref_type=heads
