@@ -1,0 +1,35 @@
+ # Intro to Git for Physicists
+
+An introductory Git course for first-year students in Applied Physics at Delft University of Technology (TU Delft).
+
+## About
+
+This repository contains teaching material and exercises to help students learn the basics of Git and GitHub. The examples are designed for use in physics education and practical work.
+
+Topics include:
+
+- repositories and commits;
+- staging and version history;
+- branches and merging; and
+- collaborating with GitHub.
+
+## Getting started
+
+1. Install [Git](https://git-scm.com/downloads).
+2. Clone this repository:
+
+	```bash
+	git clone https://github.com/<organisation-or-user>/gitintro.git
+	```
+
+3. Follow the instructions in the exercises and slides in this repository.
+
+If you are new to the command line, use a terminal such as PowerShell, Terminal, or Git Bash. A graphical Git client may also be used where indicated.
+
+## Author
+
+Created by Freek Pols.
+
+## License
+
+This work is dedicated to the public domain under the [CC0 1.0 Universal license](https://creativecommons.org/publicdomain/zero/1.0/). You may copy, modify, distribute, and use it without permission.

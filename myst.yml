@@ -2,10 +2,10 @@
 version: 1
 project:
   id: 1005c548-b153-48a7-b97a-3889dd95d663
-  # title:
+  title: Intro to git for Physicists
   # description:
   # keywords: []
-  # authors: []
+  authors: [Freek Pols]
   github: https://github.com/Contemporary-Physicslab/gitintro
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 

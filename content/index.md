@@ -1,1 +1,1 @@
-# some intro
+# Intro to git for Physicists
