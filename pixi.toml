@@ -8,8 +8,8 @@ version = "0.1.0"
 [tasks]
 editor = "jupyter lab"
 preview = "myst start"
-push = 'git add . && git commit -m "update" && git push'
-
+push = { cmd = 'git add . && git commit -m "{{ message }}" && git push', args = ["message"] }
+pull = 'git pull'
 
 [dependencies]
 mystmd = ">=1.10.1,<2"
