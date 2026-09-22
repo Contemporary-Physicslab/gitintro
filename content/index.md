@@ -20,7 +20,7 @@ no-update-date: true
 Note(book)s on the use of Git for the  
 TU Delfts' First Year Physics Lab Courses.
 
-_Freek Pols, Mark Meletto & Rolf Hut_ 
+_Freek Pols, Mark Melotto & Rolf Hut_ 
 
 ![](figures/cover.png)
 
