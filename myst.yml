@@ -14,16 +14,8 @@ project:
   references:
     TTW: https://book.the-turing-way.org/
 
-  toc:
-    - file: content/index.md
-    - file: content/start.md
-    - file: content/introduction.md
-    - file: content/startexercise.md
-      children:
-      - file: content/instruction.md
-      - file: content/poem.md
-    - file: content/conceptual_overview.md
-    - file: content/todo.md
+
 
 extends:
   - https://gitlab.tudelft.nl/oicm/assets/-/raw/main/style.yml?ref_type=heads
+  - toc.yml

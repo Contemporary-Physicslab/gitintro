@@ -1,0 +1,8 @@
+version: 1
+project:  
+  toc:
+    - file: content/index.md
+    - file: content/introduction.md
+    - file: content/startexercise.md
+    - file: content/conceptual_overview.md
+    - file: content/todo.md
