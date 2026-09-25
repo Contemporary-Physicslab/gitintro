@@ -1,7 +1,9 @@
+(ch_concept_overview)=
 # Conceptual overview
 
 > We present here an overview of Git to get an idea what it is and can do. Note that we use commands for the command line to illustrate steps. Later we will describe how this can be done also in VSC.
 
+(sec_branches)=
 ## The tree with branches
 
 The idea of git is often explained using a graph like in @fig_branches. It is called a tree, and it has branches. Every project has a _main_ branch, for a website this could be the files that the actual website is build from. But you might want to develop your website, change its appearance, but without the users of the website experiencing downtime. This is where the branches come in.
@@ -22,10 +24,12 @@ Note the difference `-c` which **c**reates a new branch!
 
 
 ```{figure} figures/branches.png
-:license: CC-BY
 :source: Freek Pols
+:license: CC-BY
 :width: 70%
 :label: fig_branches
+
+
 
 An illustration of branching in Git. Inspired by [TTW](https://book.the-turing-way.org/reproducible-research/vcs/vcs-git-branches/). 
 ```
@@ -39,6 +43,7 @@ It might also be that some development is needed but the code is not working, or
 git branch -D <name_of_branch>
 ```
 
+(sec_merge)=
 ## Merge
 What you also can see is the possibility to synchronize the main branch to any of the newly made branches, see @fig_merge. If you do this locally, you always have to verify that your local files are up-to-date:
 ```
@@ -67,9 +72,11 @@ When merging to _main_ you see in @fig_branches check marks. We are able to prot
 :source: Freek Pols
 :width: 20%
 :label: fig_merge_request
+:alt: 
 
-An merge request to a protected branch, where the merge needs both review and approval.
+An merge request to a protected branch, where the merge needs both review and approval. @license @source
 ```
 
+(sec_merge_confl)=
 ## Merge conflict
-
+It might happen that two people (or you in two different branches) have made changes in the same file. We might then hit a _merge conflict_, where git is not sure which edits to keep and which to discard (or keep both).
