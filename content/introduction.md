@@ -79,15 +79,25 @@ You do not need to understand everything at once. Start with the basic workflow,
 If you haven't an account yet, go to [https://github.com/](https://github.com/) and create a free account (sign up).
 
 **Install git**
-If you haven't installed git yet (not sure? run `git --version` in your terminal to check whether git is installed), install [git](https://git-scm.com/install). 
+If you haven't installed git yet (not sure? run 
+
+```
+git --version
+``` 
+in your terminal to check whether git is installed), install [git](https://git-scm.com/install). 
 
 Now we have an account on GitHub and software to make use of git, we need to 'connect' these. Open a terminal and run:
 
-`git config --global user.name "<username>"` where `<username>` is the name you use in your GitHub account.
+``` 
+git config --global user.name "<username>"
+```
 
-Next, run:
+where `<username>` is the name you use in your GitHub account. Next, run:
+```
+git config --global user.email "<email address>"
+```
 
-`git config --global user.email "<email address>"` where `<email address>` is the email address you use for your GitHub account.
+where `<email address>` is the email address you use for your GitHub account.
 
 ```{note}
 When you use Git through this account for the first time, you will be asked to complete a verification step.

@@ -24,12 +24,19 @@ Your partner will receive an email with an invitation to collaborate on the repo
 (sec_going_local)=
 ## Going local
 These steps will make your work locally available. 
-1. Open a terminal and navigate to the root project folder - see [Using the terminal](#sec_terminal) for instructions when needed.
-1. Using the terminal, run `git clone <repo>` where `<repo>` is the url of your repository. You can find this URL by clicking the big green button `<> Code`, and copying the HTTPS URL.
-1. Open Visual Studio Code and open (`File/Open Folder`) the folder where your repo was cloned into. The only file that will be in it will be the `README.md` file.
+
+Open a terminal and navigate to the root project folder - see [Using the terminal](#sec_terminal) for instructions when needed.
+
+Using the terminal, run 
+```
+git clone <repo>
+``` 
+where `<repo>` is the url of your repository. You can find this URL by clicking the big green button `<> Code`, and copying the HTTPS URL.
+
+Open Visual Studio Code and open (`File/Open Folder`) the folder where your repo was cloned into. The only file that will be in it will be the `README.md` file.
 
 
-(sec_exercise)
+(sec_exercise)=
 ## Exercise
 You and your partner can now take turns in writing a poem.
 
@@ -68,7 +75,7 @@ Your work will be now be available for your partner. But in order to work on it,
 ### Pull
 1. Open Visual Studio Code, and make sure you have opened the folder of the local repo.
 2. Go to source control using the icon: ![VSC git icon](figures/gitbranch_icon.svg).
-3. Next to change, click the three dots ... and choose pull, see @fig_init_pull
+3. Next to change, click the three dots ... and choose **Pull**, see @fig_init_pull
 
 ```{figure} figures/init_pull.png
 :label: fig_init_pull

@@ -1,31 +1,75 @@
 # Conceptual overview
 
-> We present here an overview of Git to get an idea what it is and can do. We present the idea of a README and Licenses as well.
+> We present here an overview of Git to get an idea what it is and can do. Note that we use commands for the command line to illustrate steps. Later we will describe how this can be done also in VSC.
 
-## The tree
-```{figure} figures/TTW_branches.png
+## The tree with branches
 
-*An illustration of branching in Git. Taken from [here](https://book.the-turing-way.org/reproducible-research/vcs/vcs-git-branches/). Illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [The Turing Way Community & Scriberia (2024)](https://zenodo.org/records/13882307).*
+The idea of git is often explained using a graph like in @fig_branches. It is called a tree, and it has branches. Every project has a _main_ branch, for a website this could be the files that the actual website is build from. But you might want to develop your website, change its appearance, but without the users of the website experiencing downtime. This is where the branches come in.
+
+You can create a new branch by running
+```
+git switch -c <name_of_new_branch>
+```
+in the terminal. This will create a new branch. You can check which branches are available and which is the branch you are working on by running:
+```
+git branch
+```
+and subsequently moving between branches by
+```
+git switch <name_of_branch>
+```
+Note the difference `-c` which **c**reates a new branch!
+
+
+```{figure} figures/branches.png
+:license: CC-BY
+:source: Freek Pols
+:width: 70%
+:label: fig_branches
+
+An illustration of branching in Git. Inspired by [TTW](https://book.the-turing-way.org/reproducible-research/vcs/vcs-git-branches/). 
 ```
 
-## README
+In the example given in @fig_branches, one has run `git branch -c dev`, `git branch -c style`, and `git branch -c functest` - not necessarily done by the same person.
 
-Project name
+When you make a new branch, all files are 'copied'. You can now edit these files in that branch, where the main branch is left intact. After sufficient development and testing you can _merge_ the new branch into the main. In the given example when a new style is developed and approved.
 
-Authors / Owners
+It might also be that some development is needed but the code is not working, or needed anymore. It might become a _stale_ branch then. It can be removed by running:
+```
+git branch -D <name_of_branch>
+```
 
-Licenses
+## Merge
+What you also can see is the possibility to synchronize the main branch to any of the newly made branches, see @fig_merge. If you do this locally, you always have to verify that your local files are up-to-date:
+```
+git switch main
+git pull origin main
+```
+After that you can _merge_:
+```
+git switch <new-branch>
+git merge main
+```
 
-Table of content
+```{figure} figures/merge.png
+:license: CC-BY
+:source: Freek Pols
+:width: 20%
+:label: fig_merge
 
-How to do it yourselves
+An example of merging. 
+```
 
-Citing
+When merging to _main_ you see in @fig_branches check marks. We are able to protect branches and specify rules. For instance, one has to review the code first before allowing to merge. This protects the continuity of the main output. This is then called a _merge request_ (GitLab) or a _pull request_ (GitHub).
 
-Contact
+```{figure} figures/merge_request.png
+:license: CC-BY
+:source: Freek Pols
+:width: 20%
+:label: fig_merge_request
 
-Contributors
+An merge request to a protected branch, where the merge needs both review and approval.
+```
 
+## Merge conflict
 
-
-## LICENSE
