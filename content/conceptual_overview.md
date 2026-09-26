@@ -3,6 +3,99 @@
 
 > We present here an overview of Git to get an idea what it is and can do. Note that we use commands for the command line to illustrate steps. Later we will describe how this can be done also in VSC.
 
+(sec_concept)=
+## Analogy
+
+Imaging a project where you make a digital painting. For the assignment, you know that you need the help of someone else as you are terrible in drawing cats. But you are terribly busy, so you want to continue working on the project while your buddy is drawing a cat. Also, you might want to make edits on earlier parts of the drawing. 
+
+Of course you start with an empty canvas, @fig_tree_1, where you quickly draw a tree on @fig_tree_2.
+
+````{figure}
+:class: grid grid-cols-2 items-end gap-4 
+:label: fig_tree_init
+
+```{figure} figures/tree_1.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: fig_tree_1
+
+Starting with an empty canvas
+```
+
+```{figure} figures/tree_2.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: fig_tree_2
+
+The second snapshot of your work.
+```
+
+The first two snapshots of your project. You can always go back to earlier versions, e.g. starting with an empty canvas.
+````
+
+You draw a background and a sun, where you again make a 'snapshot' of your work @fig_tree_3. 
+
+```{figure} figures/tree_3.png
+:source: Freek Pols
+:license: CC-BY
+:width: 50%
+:label: fig_tree_3
+
+The third snapshot of your work.
+```
+
+Now it is time for your friend to draw the cat @fig_tree_4a while you draw some clouds @fig_tree_4b. 
+
+````{figure}
+:class: grid grid-cols-2 items-end gap-4 
+:label: fig_tree_branches
+
+```{figure} figures/tree_4a.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: fig_tree_4a
+
+One 'branch' where a cat is added
+```
+
+```{figure} figures/tree_4b.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: fig_tree_4b
+
+One 'branch' where a cloud is added
+```
+
+Two branches, each working based on @fig_tree_3
+````
+
+When both are happy you combine these two into one main painting, @fig_tree_5. You reconsider step 2 and try to see whether a different background color improves your work, @fig_tree_5a. You'll still have to decide if you are happy with that change, or whether you revert it.
+
+
+```{figure} figures/tree_5.png
+:source: Freek Pols
+:license: CC-BY
+:width: 50%
+:label: fig_tree_5
+
+After merging the two branches
+```
+
+```{figure} figures/tree_5a.png
+:source: Freek Pols
+:license: CC-BY
+:width: 50%
+:label: fig_tree_5a
+
+The second snapshot of your work.
+```
+
+
+
 (sec_branches)=
 ## The tree with branches
 
@@ -28,7 +121,6 @@ Note the difference `-c` which **c**reates a new branch!
 :license: CC-BY
 :width: 70%
 :label: fig_branches
-
 
 
 An illustration of branching in Git. Inspired by [TTW](https://book.the-turing-way.org/reproducible-research/vcs/vcs-git-branches/). 
