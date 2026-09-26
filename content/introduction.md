@@ -121,3 +121,16 @@ We are ready to explore the use of git by an exercise.
 ```{tip} **Git Desktop**
 Alternatively to VSC, GitHub Desktop is a graphical application that simplifies working with Git repositories, making it easier to synchronize your files with platforms like GitHub or GitLab. Instead of using command-line instructions, you can perform common tasks—such as committing changes, pushing to remote repositories, and resolving merge conflicts—through an intuitive interface. This is especially helpful for beginners or those who prefer a visual workflow. We won't go into detail of using Git Desktop, but it might be worth exploring.
 ```
+
+
+```{warning}
+remove figure below after testing!
+```
+```{figure} figures/init_pull.png
+:width: 85%
+:alt: a picture showing the dropdown menu to pull from github using VSC
+:resource: self made picture
+:license: cc-by0
+
+An example of not labeled figure
+```

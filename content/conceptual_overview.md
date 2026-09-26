@@ -91,7 +91,7 @@ After merging the two branches
 :width: 50%
 :label: fig_tree_5a
 
-The second snapshot of your work.
+Going back to a previous commit and changing the background
 ```
 
 
@@ -99,7 +99,7 @@ The second snapshot of your work.
 (sec_branches)=
 ## The tree with branches
 
-The idea of git is often explained using a graph like in @fig_branches. It is called a tree, and it has branches. Every project has a _main_ branch, for a website this could be the files that the actual website is build from. But you might want to develop your website, change its appearance, but without the users of the website experiencing downtime. This is where the branches come in.
+Based on the idea of making a painting, you get a fair idea of git version control. The idea of git is often explained using a graph like in @fig_branches. It is called a tree, and it has branches. Every project has a _main_ branch, for a website this could be the files that the actual website is build from. But you might want to develop your website, change its appearance, but without the users of the website experiencing downtime. This is where the branches come in.
 
 You can create a new branch by running
 ```
@@ -166,7 +166,7 @@ When merging to _main_ you see in @fig_branches check marks. We are able to prot
 :label: fig_merge_request
 :alt: 
 
-An merge request to a protected branch, where the merge needs both review and approval. @license @source
+An merge request to a protected branch, where the merge needs both review and approval.
 ```
 
 (sec_merge_confl)=
