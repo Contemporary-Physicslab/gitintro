@@ -6,7 +6,7 @@
 (sec_concept)=
 ## Analogy
 
-Imaging a project where you make a digital painting. For the assignment, you know that you need the help of someone else as you are terrible in drawing cats. But you are terribly busy, so you want to continue working on the project while your buddy is drawing a cat. Also, you might want to make edits on earlier parts of the drawing. 
+Imagine a project where you make a digital painting. For the assignment, you know that you need the help of someone else as you are terrible in drawing cats. But you are terribly busy, so you want to continue working on the project while your buddy is drawing a cat. Also, you might want to make edits on earlier parts of the drawing. 
 
 Of course you start with an empty canvas, @fig_tree_1, where you quickly draw a tree on @fig_tree_2.
 
