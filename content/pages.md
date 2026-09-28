@@ -1,3 +1,9 @@
+# Pages
+
+- What it is
+- Buildscript
+- How to enable that script
+
 ## Instructions for repo owner
 1. Go to the [repo](https://github.com/Contemporary-Physicslab/gitintro)
 1. Click the green button `Use this template` and choose `Create a new repository`

@@ -99,6 +99,11 @@ git config --global user.email "<email address>"
 
 where `<email address>` is the email address you use for your GitHub account.
 
+You can check your configuration by running:
+```
+git config --list
+```
+
 ```{note}
 When you use Git through this account for the first time, you will be asked to complete a verification step.
 ```

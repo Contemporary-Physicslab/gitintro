@@ -5,4 +5,7 @@ project:
     - file: content/introduction.md
     - file: content/startexercise.md
     - file: content/conceptual_overview.md
+    - file: content/readm_lic.md
+    - file: content/pages.md
     - file: content/todo.md
+    - file: content/gitbasics.md

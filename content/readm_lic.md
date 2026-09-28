@@ -1,5 +1,9 @@
+# Git specifics
 
-
+## Gitignore
+- folders
+- specific files
+- .ipynb vs .md met jupytext
 
 
 ## README
