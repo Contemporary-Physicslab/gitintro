@@ -11,8 +11,8 @@ Imagine a project where you make a digital painting. For the assignment, you kno
 Of course you start with an empty canvas, @fig_tree_1, where you quickly draw a tree on @fig_tree_2.
 
 ````{figure}
-:class: grid grid-cols-2 items-end gap-4 
 :label: fig_tree_init
+:class: grid grid-cols-2 items-end gap-4 subfigure-grid
 
 ```{figure} figures/tree_1.png
 :source: Freek Pols
@@ -49,8 +49,8 @@ The third snapshot of your work.
 Now it is time for your friend to draw the cat @fig_tree_4a while you draw some clouds @fig_tree_4b. 
 
 ````{figure}
-:class: grid grid-cols-2 items-end gap-4 
 :label: fig_tree_branches
+:class: grid grid-cols-2 items-end gap-4 subfigure-grid
 
 ```{figure} figures/tree_4a.png
 :source: Freek Pols
@@ -162,13 +162,49 @@ When merging to _main_ you see in @fig_branches check marks. We are able to prot
 ```{figure} figures/merge_request.png
 :license: CC-BY
 :source: Freek Pols
-:width: 20%
+:width: 30%
 :label: fig_merge_request
 :alt: 
 
-An merge request to a protected branch, where the merge needs both review and approval.
+A merge request to a protected branch, where the merge needs both review and approval.
 ```
 
 (sec_merge_confl)=
 ## Merge conflict
 It might happen that two people (or you in two different branches) have made changes in the same file. We might then hit a _merge conflict_, where git is not sure which edits to keep and which to discard (or keep both).
+
+````{figure}
+:label: fig_tree_conflict
+:class: grid grid-cols-2 items-end gap-4 subfigure-grid
+
+```{figure} figures/tree_conflict_1.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: tree_conflict_1
+
+In one branch a cloud was added
+```
+
+```{figure} figures/tree_conflict_2.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: tree_conflict_2
+
+In the other a bird
+```
+
+Merge conflicts come into existence when a same part is edited, git doesn't know what to keep.
+````
+
+You will not to solve the conflict, decide what to keep, what to discard, or keep both... 
+
+```{figure} figures/tree_conflict_solved.png
+:source: Freek Pols
+:license: CC-BY
+:width: 80%
+:label: tree_conflict_solved
+
+Merge conflict solved?
+```
