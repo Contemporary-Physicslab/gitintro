@@ -1,10 +1,109 @@
 # Git specifics
 
 ## Gitignore
-- folders
-- specific files
-- .ipynb vs .md met jupytext
+A .gitignore file contains all files or directories that Git ignores while tracking, committing, pushing or pulling files to your repository. There could be several reasons that you would want to include files in a gitignore file, below some examples: 
 
+* Temporary or auto-generated files that are created and deleted while running your code can clutter your history. 
+* Any sensitive information that you would only want on your local computer and not in a public repository. 
+* Directories containing a large number of data files that do not need to be committed with every version of the project and increase the time to push and pull significantly. 
+
+Your .gitignore file can include both folders, specific files, or files ending with a specific extension. 
+
+Below an example for ignoring a folder "data", a specific file "project.py" and all files ending in ".ipynb"
+
+```python
+# Ignore the entire "data" folder (and all its contents)
+data/
+
+# Ignore the specific file "project.py"
+project.py
+
+# Ignore all Jupyter Notebook files
+*.ipynb
+```
+
+````{dropdown}[A note when working with jupyter notebooks (.ipynb)]
+Jupyter notebooks are .ipynb files, which are written in raw JSON, including metadata and outputs. This means that every time your notebook is run, the JSON file changes to include the new metadata and outputs. 
+
+The jupyter notebook: 
+```python
+print("Hello World")
+```
+
+The JSON file after execution:
+```json
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "execution": {
+     "iopub.status.busy": "2026-10-07T09:30:00.000000Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello World\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hello World\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+```
+
+Git reads these JSON files as long text files and not as code. This can cause very difficult merge conflicts in the JSON files, compared to relatively simple merge conflicts in a python file. For example: two people clone this notebook above. They each make minor changes to the code, one adding `print("Hello Alice")` and the other adding `print("Hello Bob")`. Below are the merge conflicts that would arise in a JSON file and a python file. 
+
+The JSON file merge conflict:
+```json
+<<<<<< HEAD
+  "execution_count": 1,
+  "outputs": [
+    {
+      "name": "stdout",
+      "output_type": "stream",
+      "text": [ "Hello Alice\n" ]
+    }
+  ],
+  "source": [ "print(\"Hello Alice\")" ]
+=======
+  "execution_count": 3,
+  "outputs": [
+    {
+      "name": "stdout",
+      "output_type": "stream",
+      "text": [ "Hello Bob\n" ]
+    }
+  ],
+  "source": [ "print(\"Hello Bob\")" ]
+>>>>>> feature-branch
+```
+The merge conflict that would arise in a python file: 
+```python
+<<<<<< HEAD
+print("Hello Alice")
+=======
+print("Hello Bob")
+>>>>>> feature-branch
+```
+
+For this reason, it is not ideal to use jupyter notebook files in Git. If you still want to use jupyter notebooks, you can convert them to pyton (.py) files using [Jupytext](https://jupytext.org/). 
+
+````
 
 ## README
 A readme file is an important source of information in your project. It contains an explanation of the content of your project, who worked on the project, how to contact anybody working on the project, how to cite the project in further scientific research and any further information that you find to be relevant. 
@@ -26,6 +125,6 @@ A good readme file includes at least the information below, but you can always a
 
 * **Licenses**: Information about the specific copyright license under which the project is published. This lets the reader know how to use and properly reference any figures, code or text from your project. 
 
-The goal of a readme file is to answer any and all questions that a user might have while looking at your project or while using your project. Sections that can be added when relevant could be *an explanation of the data*, *examples*, *keywords*, *most relevant conclusions*, etc. 
+The goal of a readme file is to answer any and all questions that a user might have while looking at your project or while using your project. Sections that can be added when relevant could be *an explanation of the data*, *examples*, *keywords*, *most relevant conclusions*, etc. An example of a readme file including a lot of information can be found [here](https://github.com/FreekPols/Mechanica/blob/main/README.md). 
 
 ## LICENSE
