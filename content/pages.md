@@ -11,13 +11,9 @@ Your website is usually hosted using the following url: https://<username>.githu
 
 
 ## GitHub action for JB
-As said, we can make use of GitHub actions to build our website.
+As said, we can make use of GitHub actions to build our website. A minimal version example is shown below - this action only converts the markdown & notebooks into html and uploads these as package to GitHub pages. No fancy stuff like executing python scripts during build, or automatically building a pdf - which is all possible!
 
-````{tab-set}
-```{tab-item} pixi
-
-```
-```{tab-item} pip
+```{code} bash
 name: MyST GitHub Pages Deploy
 on:
   push:
@@ -58,11 +54,6 @@ jobs:
       - name: Install MyST
         run: npm install -g mystmd
 
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-         
       - name: Build HTML Assets
         run: myst build --html 
 
@@ -75,45 +66,14 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 ```
-````
 
-
-
-- instructions
-
-
-
-- What it is
-- Buildscript
-- How to enable that script
-
-## Instructions for repo owner
-1. Go to the [repo](https://github.com/Contemporary-Physicslab/gitintro)
-1. Click the green button `Use this template` and choose `Create a new repository`
-1. Choose your repository name wisely - this will also become part of the URL! Don't change any of the other settings and click `Create repository`.
-
-You repository will now be created using the template repo. 
-
-Before your website can be seen, we will need to enable GitHub pages.
+## Enable GitHub Pages
+To enable GitHub pages using actions:
 
 1. Go to `Settings` (top mid of the screen) and click `Pages`. From the dropdown menu under `Build and Development` choose `GitHub Actions` as source. 
 1. Click on `Code` in the top left corner and click on ⚙ (the `gear-icon` near **About**) at the right site of the page. Check the box `Use your GitHub Pages` website.
 
+If a GitHub action is present (in the folder `.github/workflows`) it will rebuild the site with every new commit to GitHub.
 
 
 
-## Inviting your partner
-For IP2, you work in pairs. You can invite your partner(s) to collaborate on your repository. To do this, go to your new repository on GitHub and follow the steps below.
-
-1. Go to your new repository on GitHub.
-
-1. Click on **Settings** (in the top right corner of your screen) and click on **Collaborators** in the left-hand menu.
-
-1. Click the **Add people** button under the "Manage access" heading.
-
-1. Type your partner's (or partners') username and click on **Add <username> to this repository** (where `<username>` is your partner's username).
-
-## Partner accepts invitation
-Your partner will receive an email with an invitation to collaborate on the repository. Once accepted, both of you can make changes to the repository.
-
-Your partner follows steps X through X, but uses the URL of **your** repository.

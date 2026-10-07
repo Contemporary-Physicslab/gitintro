@@ -1,5 +1,5 @@
-(ch_concept_overview)=
-# Conceptual overview
+(ch_basics)=
+# Basics
 
 > We present here an overview of Git to get an idea what it is and can do. Note that we use commands for the command line to illustrate steps. Later we will describe how this can be done also in VSC.
 
@@ -203,7 +203,7 @@ You will not to solve the conflict, decide what to keep, what to discard, or kee
 ```{figure} figures/tree_conflict_solved.png
 :source: Freek Pols
 :license: CC-BY
-:width: 80%
+:width: 70%
 :label: tree_conflict_solved
 
 Merge conflict solved?
