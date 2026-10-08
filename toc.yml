@@ -5,6 +5,7 @@ project:
     - file: content/introduction.md
     - file: content/basics.md
     - file: content/startexercise.md
+    - file: content/branchexercise.md
     - file: content/readm_lic.md
     - file: content/pages.md
     - file: content/commands.md
