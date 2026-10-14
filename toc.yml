@@ -8,3 +8,4 @@ project:
     - file: content/readm_lic.md
     - file: content/pages.md
     - file: content/commands.md
+    - file: content/branch_rules.md
